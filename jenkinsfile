@@ -9,7 +9,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    dockerImage = docker.build("devops-site")
+                    dockerImage = docker.build("mydevopsproject")
                 }
             }
         }
@@ -19,5 +19,4 @@ pipeline {
                     dockerImage.run("-d -p 8081:80")
                 }
             }
-        }
-    }}
+        }}}
